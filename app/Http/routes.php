@@ -11,41 +11,13 @@
 |
 */
 
-/*use Illuminate\Support\Facades\Auth;
-
-                // Получить текущего аутентифицированного пользователя...
-$user = Auth::user();
-
-                // Получить ID текущего аутентифицированного пользователя...
-$id = Auth::id();
-
-if($id == ""){
-    Route::get('/', function () {
-        return view('auth');
-    });
-}
-else{
-    Route::get('auth', function () {
-        return view('auth');
-    });
-
-    Route::get('/', function () {
-        return view('welcome');
-    });
-}*/
 
 Route::auth();
-
-//Route::post('/sendMessage', 'Message\MessageController@sendMessage');
 
 Route::post('/sendMessage','AjaxController@sendMessage');
 
 Route::get('/userChats/{userId}','ShowUserChatsController@show');
 
-
-/*Route::get('/', function () {
-    return view('main');
-});*/
 
 Route::get('/', 'HomeControllerMy@show');
 
@@ -55,18 +27,3 @@ Route::get('/chat/{userIDOther}', 'ChatController@show');
 Route::get('/delete/{userId}', 'DeleteUserController@deleteUser');
 
 
-
-
-
-/*Route::post('/task', function (Request $request) {
-
-});
-
-Route::delete('/task/{task}', function (Task $task) {
-    
-});
-
-
-
-
-Route::get('/home', 'HomeController@index');*/
