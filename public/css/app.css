@@ -1,0 +1,236 @@
+/*▼ ОБЩЕЕ ▼*/
+html, body{
+    height:100%;
+}
+
+.content{
+    min-height: calc(100% - 122px);
+    max-height: calc(100% - 122px);
+    overflow:hidden;
+    border: 1px solid rgb(207, 207, 207);
+    margin: 10px auto;
+    padding: 15px 15px;
+    position:relative;
+}
+
+.btn{
+    transition: all 0.2s;
+}
+
+/*▲ ОБЩЕЕ ▲*/
+
+/*▼ ГЛАВНАЯ ▼*/
+.userList{
+    margin: auto 0px;
+}
+
+.userList-item{
+    margin: 0px auto;
+    padding: 5px 5px;
+}
+
+.userList-item_inner{
+    border: 1px solid rgb(207, 207, 207);
+    padding: 15px 15px;
+    position: relative;
+    
+}
+
+.userList-item_button{
+    display: flex;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    height: calc(100% + 2px);
+    align-items: center;
+    border-radius: 0px;
+}
+
+.userList-item_buttonDel{
+    right: 58px;
+}
+
+.userList-item_buttonChats{
+
+}
+
+/*▲ ГЛАВНАЯ ▲*/
+
+/*▼ ЧАТ ▼*/
+
+.chat{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    padding: 15px;
+    
+}
+
+.chat-head{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+}
+
+.chat-head > *{
+    display: inline-block;
+    flex: 0 0 50%;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.chat-head_sender{
+    text-align: right;
+}
+
+.chat-window{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 0;
+    flex: 1 0;
+    margin-top: 10px;
+}
+
+/*▼ ЧАТ - БЛОК СООБЩЕНИЙ ▼*/
+
+.chat-window_messages{
+    flex: 1 0;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    scrollbar-color: #555 #f1f1f1;
+    -moz-scrollbar-arrow-color: none;
+    
+}
+
+
+.chat-window_messages::-webkit-scrollbar {
+    width: 10px;
+}
+  
+
+.chat-window_messages::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 0px 10px 10px 0px;
+}
+  
+
+.chat-window_messages::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 30px;
+}
+  
+
+.chat-window_messages::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 30px; 
+}
+
+.chat-window_messages-inner{
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    min-height: 0;
+}
+.messageItem-head{
+    margin: 5px 0px;
+}
+.messageItem-head_name{
+    padding-left: 10px;
+}
+
+.messageItem-bottom{
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 0px 10px 10px 10px;
+    width: 90%;
+    background: rgb(181, 222, 255);
+    display: inline-block;
+    text-align: left;
+}
+
+.messageItemSender{
+    text-align: right;
+}
+
+.messageItemSender .messageItem-bottom{
+    border-radius: 10px 0px 10px 10px;
+    background: rgb(198, 255, 223);
+}
+
+.messageItem{
+    margin-top: 10px;
+}
+
+/*▲ ЧАТ - БЛОК СООБЩЕНИЙ ▲*/
+
+/*▼ ЧАТ - БЛОК С НАПИСАНИЕМ СООБЩЕНИЯ ▼*/
+.chat-window_input{
+    
+    flex: 0 0 80px;
+    
+    
+}
+
+.chat-window_input > *{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.chat-window_input textarea{
+    flex: 1 0;
+    outline: none;
+	-moz-appearance: none;
+    border: 1px solid #999;
+    padding: 10px;
+    resize: none;
+    overflow: auto;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.chat-window_input-btn{
+    flex: 0 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px;
+    position: relative;
+}
+
+.chat-window_input-btn button{
+    margin: 0px 0px !important;
+    height: 80px;
+    width: calc(100% + 2px);
+    position: absolute;
+    border-radius: 0px 10px 10px 0px;
+}
+/*▲ ЧАТ - БЛОК С НАПИСАНИЕМ СООБЩЕНИЯ ▲*/
+
+/*▲ ЧАТ ▲*/
+
+@media all and (max-width: 766px) { 
+    .content{
+        overflow:hidden;
+        border: 0px solid rgb(207, 207, 207);
+        margin: 0px auto;
+        padding: 15px 15px;
+    }
+}
